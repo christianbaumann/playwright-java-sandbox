@@ -1,1 +1,3 @@
 /.idea/
+/target/
+/playwright-java-sandbox.iml
