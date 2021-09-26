@@ -16,7 +16,10 @@ public class Sandbox {
         browser = Playwright
                 .create()
                 .chromium()
-                .launch(new BrowserType.LaunchOptions().setHeadless(false));
+                .launch(new BrowserType.LaunchOptions().
+                        setHeadless(false).
+//                        open developer tools through a launch option.
+                        setDevtools(true));
 
         context = browser.newContext(new Browser.NewContextOptions());
         context.setDefaultTimeout(10000);
